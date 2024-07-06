@@ -103,47 +103,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                     padding: EdgeInsets.only( left: 6, right: 6),
                                     margin: EdgeInsets.only( top: 10, bottom: 10),
                                     width: double.infinity,
-                                    child: Row(
-                                        children: [
-                                          Container(
-                                            padding: EdgeInsets.only( left: 9, right: 9),
-                                            margin: EdgeInsets.only( right: 10),
-                                            width: 40,
-                                            height: 40,
-                                            decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(15),
-                                              color: Color(0xFFFEE500),
-                                            ),
-                                            child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Expanded(
-                                                    child: Container(
-                                                        margin: EdgeInsets.only( top: 0),
-                                                        height: 20,
-                                                        width: double.infinity,
-                                                        child: Image.asset('assets/images/kakaotalk.png',
-                                                          fit: BoxFit.fill,
-                                                        )
-                                                    ),
-                                                  ),
-                                                ]
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: Container(
-                                              width: double.infinity,
-                                              child: Text(
-                                                '카카오톡 로그인',
-                                                style: TextStyle(
-                                                  color: Color(0xFF000000),
-                                                  fontSize: 16,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ]
-                                    ),
+                                      child: Image.asset(
+                                        'assets/images/kklogin.png',
+                                        fit: BoxFit.fill,
+                                      )
                                   ),
                                 ),
                               ]
