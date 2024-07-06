@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:week_2/chattab.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,19 +9,31 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return ScreenUtilInit(
+      designSize: Size(360, 780),
+      builder: () => MaterialApp(
+        title: 'Flutter Demo',
+        home: MyHomePage(title: 'screenutil'),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
+
+  // This widget is the root of your application.
+  // @override
+  // Widget build(BuildContext context) {
+  //   return MaterialApp(
+  //     title: 'Flutter Demo',
+  //     theme: ThemeData(
+  //       colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+  //       useMaterial3: true,
+  //     ),
+  //     home: const MyHomePage(title: 'Flutter Demo Home Page'),
+  //   );
+  // }
+// }
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -32,6 +46,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -92,23 +107,18 @@ class _MyHomePageState extends State<MyHomePage> {
                           margin: EdgeInsets.symmetric(horizontal: 60),
                           width: double.infinity,
                           child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                IntrinsicHeight(
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(15),
-                                      color: Color(0xFFFEE500),
-                                    ),
-                                    padding: EdgeInsets.only( left: 6, right: 6),
-                                    margin: EdgeInsets.only( top: 10, bottom: 10),
-                                    width: double.infinity,
-                                      child: Image.asset(
-                                        'assets/images/kklogin.png',
-                                        fit: BoxFit.fill,
-                                      )
-                                  ),
-                                ),
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [ //카카오톡 로그인 버튼
+                                InkWell(
+                                  onTap: () {
+                                    // 새로운 화면으로 이동
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => chattab())
+                                    );
+                                  },
+                                  child: Image.asset("assets/images/kklogin.png"),
+                                )
                               ]
                           ),
                         ),
