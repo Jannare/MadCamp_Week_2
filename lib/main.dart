@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: Size(360, 780),
-      builder: () => MaterialApp(
-        title: 'Flutter Demo',
-        home: MyHomePage(title: 'screenutil'),
+      builder: (BuildContext context, Widget? child) => MaterialApp(
+        title: 'ScreenUtil Test',
+        home: MyHomePage(title: 'ScreenUtil Test'),
       ),
     );
   }
