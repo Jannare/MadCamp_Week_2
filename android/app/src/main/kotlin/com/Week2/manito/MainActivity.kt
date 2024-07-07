@@ -1,4 +1,4 @@
-package com.example.week_2
+package com.Week2.manito
 
 import io.flutter.embedding.android.FlutterActivity
 

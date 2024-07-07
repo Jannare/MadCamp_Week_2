@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Chattab extends StatelessWidget {
-	const Chattab({super.key});
+
+
+class chattab extends StatelessWidget {
+	const chattab({super.key});
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
@@ -49,7 +52,7 @@ class Chattab extends StatelessWidget {
 																						width: double.infinity,
 																						decoration: BoxDecoration(
 																							image: DecorationImage(
-																									image: NetworkImage("https://i.imgur.com/1tMFzp8.png"),
+																									image: AssetImage("assets/images/background.png"),
 																									fit: BoxFit.cover
 																							),
 																						),
@@ -184,8 +187,8 @@ class Chattab extends StatelessWidget {
 																																height: 34,
 																																child: ClipRRect(
 																																		borderRadius: BorderRadius.circular(13),
-																																		child: Image.network(
-																																			'https://i.imgur.com/1tMFzp8.png',
+																																		child: Image.asset(
+																																			'assets/chattab/profilePic.png',
 																																			fit: BoxFit.fill,
 																																		)
 																																)
@@ -401,7 +404,12 @@ class Chattab extends StatelessWidget {
 																													),
 																													width: 22,
 																													height: 22,
-																													child: SizedBox(),
+																														child: ClipRRect(
+																																child: Image.asset(
+																																	'assets/chattab/+button.png',
+																																	fit: BoxFit.fill,
+																																)
+																														)
 																												),
 																												Container(
 																													decoration: BoxDecoration(
