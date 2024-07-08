@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-
-
 class chattab extends StatelessWidget {
 	const chattab({super.key});
 	@override
@@ -47,12 +43,12 @@ class chattab extends StatelessWidget {
 																				crossAxisAlignment: CrossAxisAlignment.start,
 																				children: [
 																					Container(
-																						padding: EdgeInsets.only( top: 56, bottom: 494),
+																						padding: EdgeInsets.only( top: 55, bottom: 286),
 																						height: 780,
 																						width: double.infinity,
 																						decoration: BoxDecoration(
 																							image: DecorationImage(
-																									image: AssetImage("assets/images/background.png"),
+																									image: AssetImage('assets/images/background.png'),
 																									fit: BoxFit.cover
 																							),
 																						),
@@ -61,7 +57,7 @@ class chattab extends StatelessWidget {
 																								children: [
 																									IntrinsicHeight(
 																										child: Container(
-																											margin: EdgeInsets.only( bottom: 6, left: 20, right: 20),
+																											margin: EdgeInsets.only( bottom: 7, left: 20, right: 20),
 																											width: double.infinity,
 																											child: Row(
 																													children: [
@@ -69,8 +65,8 @@ class chattab extends StatelessWidget {
 																																margin: EdgeInsets.only( right: 6),
 																																width: 10,
 																																height: 17,
-																																child: Image.network(
-																																	'https://i.imgur.com/1tMFzp8.png',
+																																child: Image.asset(
+																																	'assets/chattab/back.png',
 																																	fit: BoxFit.fill,
 																																)
 																														),
@@ -106,15 +102,7 @@ class chattab extends StatelessWidget {
 																																	fontSize: 16,
 																																),
 																															),
-																														),
-																														Container(
-																																width: 20,
-																																height: 14,
-																																child: Image.network(
-																																	'https://i.imgur.com/1tMFzp8.png',
-																																	fit: BoxFit.fill,
-																																)
-																														),
+																														)
 																													]
 																											),
 																										),
@@ -141,8 +129,8 @@ class chattab extends StatelessWidget {
 																																margin: EdgeInsets.only( right: 17),
 																																width: 17,
 																																height: 15,
-																																child: Image.network(
-																																	'https://i.imgur.com/1tMFzp8.png',
+																																child: Image.asset(
+																																	'assets/chattab/Notice',
 																																	fit: BoxFit.fill,
 																																)
 																														),
@@ -152,28 +140,14 @@ class chattab extends StatelessWidget {
 																																color: Color(0xFF000000),
 																																fontSize: 15,
 																															),
-																														),
-																														Expanded(
-																															child: Container(
-																																width: double.infinity,
-																																child: SizedBox(),
-																															),
-																														),
-																														Container(
-																																width: 14,
-																																height: 7,
-																																child: Image.network(
-																																	'https://i.imgur.com/1tMFzp8.png',
-																																	fit: BoxFit.fill,
-																																)
-																														),
+																														)
 																													]
 																											),
 																										),
 																									),
 																									IntrinsicHeight(
 																										child: Container(
-																											margin: EdgeInsets.only( bottom: 9, left: 11, right: 11),
+																											margin: EdgeInsets.only( bottom: 10, left: 11, right: 11),
 																											width: double.infinity,
 																											child: Row(
 																													crossAxisAlignment: CrossAxisAlignment.start,
@@ -188,20 +162,20 @@ class chattab extends StatelessWidget {
 																																child: ClipRRect(
 																																		borderRadius: BorderRadius.circular(13),
 																																		child: Image.asset(
-																																			'assets/chattab/profilePic.png',
+																																			'asset/chattab/profilePic.png',
 																																			fit: BoxFit.fill,
 																																		)
 																																)
 																														),
 																														IntrinsicHeight(
 																															child: Container(
-																																margin: EdgeInsets.only( top: 2, right: 5),
+																																margin: EdgeInsets.only( top: 1, right: 5),
 																																width: 59,
 																																child: Column(
 																																		crossAxisAlignment: CrossAxisAlignment.start,
 																																		children: [
 																																			Container(
-																																				margin: EdgeInsets.only( bottom: 5),
+																																				margin: EdgeInsets.only( bottom: 6),
 																																				child: Text(
 																																					'이름',
 																																					style: TextStyle(
@@ -216,7 +190,7 @@ class chattab extends StatelessWidget {
 																																						borderRadius: BorderRadius.circular(13),
 																																						color: Color(0xFFFFFFFF),
 																																					),
-																																					padding: EdgeInsets.symmetric(vertical: 12),
+																																					padding: EdgeInsets.symmetric(vertical: 11),
 																																					width: double.infinity,
 																																					child: Column(
 																																							children: [
@@ -237,7 +211,7 @@ class chattab extends StatelessWidget {
 																														),
 																														Expanded(
 																															child: Container(
-																																margin: EdgeInsets.only( top: 45),
+																																margin: EdgeInsets.only( top: 44),
 																																width: double.infinity,
 																																child: Text(
 																																	'1',
@@ -254,7 +228,7 @@ class chattab extends StatelessWidget {
 																									),
 																									IntrinsicHeight(
 																										child: Container(
-																											margin: EdgeInsets.only( bottom: 18, left: 14, right: 14),
+																											margin: EdgeInsets.only( bottom: 19, left: 14, right: 14),
 																											width: double.infinity,
 																											child: Row(
 																													mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -262,7 +236,7 @@ class chattab extends StatelessWidget {
 																													children: [
 																														IntrinsicHeight(
 																															child: Container(
-																																margin: EdgeInsets.only( top: 13),
+																																margin: EdgeInsets.only( top: 12),
 																																width: 26,
 																																child: Column(
 																																		crossAxisAlignment: CrossAxisAlignment.start,
@@ -303,7 +277,7 @@ class chattab extends StatelessWidget {
 																																									borderRadius: BorderRadius.circular(13),
 																																									color: Color(0xFFDCFBD7),
 																																								),
-																																								padding: EdgeInsets.symmetric(vertical: 12),
+																																								padding: EdgeInsets.symmetric(vertical: 11),
 																																								width: double.infinity,
 																																								child: Column(
 																																										children: [
@@ -329,8 +303,8 @@ class chattab extends StatelessWidget {
 																																						transform: Matrix4.translationValues(3, -3, 0),
 																																						width: 7,
 																																						height: 12,
-																																						child: Image.network(
-																																							'https://i.imgur.com/1tMFzp8.png',
+																																						child: Image.asset(
+																																							'assets/chattab/tail2',
 																																							fit: BoxFit.fill,
 																																						)
 																																				),
@@ -349,8 +323,8 @@ class chattab extends StatelessWidget {
 																												borderRadius: BorderRadius.circular(34),
 																												color: Color(0x26000000),
 																											),
-																											padding: EdgeInsets.symmetric(vertical: 8),
-																											margin: EdgeInsets.symmetric(horizontal: 115),
+																											padding: EdgeInsets.symmetric(vertical: 7),
+																											margin: EdgeInsets.only( bottom: 54, left: 115, right: 115),
 																											width: double.infinity,
 																											child: Column(
 																													children: [
@@ -359,6 +333,92 @@ class chattab extends StatelessWidget {
 																															style: TextStyle(
 																																color: Color(0xFFF8F8F9),
 																																fontSize: 11.5,
+																															),
+																														),
+																													]
+																											),
+																										),
+																									),
+																									IntrinsicHeight(
+																										child: Container(
+																											decoration: BoxDecoration(
+																												border: Border.all(
+																													color: Color(0xFF000000),
+																													width: 1,
+																												),
+																												borderRadius: BorderRadius.circular(15),
+																												color: Color(0xFF8C5B3F),
+																												boxShadow: [
+																													BoxShadow(
+																														color: Color(0x4D000000),
+																														blurRadius: 4,
+																														offset: Offset(0, 4),
+																													),
+																												],
+																											),
+																											padding: EdgeInsets.only( left: 20, right: 20),
+																											margin: EdgeInsets.only( bottom: 14, left: 70, right: 70),
+																											width: double.infinity,
+																											child: Column(
+																													crossAxisAlignment: CrossAxisAlignment.start,
+																													children: [
+																														IntrinsicHeight(
+																															child: Container(
+																																decoration: BoxDecoration(
+																																	borderRadius: BorderRadius.circular(10),
+																																	color: Color(0xFFDCFCD7),
+																																),
+																																padding: EdgeInsets.only( top: 22, bottom: 22, left: 28, right: 28),
+																																margin: EdgeInsets.only( top: 10),
+																																width: double.infinity,
+																																child: Column(
+																																		crossAxisAlignment: CrossAxisAlignment.start,
+																																		children: [
+																																			Container(
+																																				width: double.infinity,
+																																				child: Text(
+																																					'{사용자 이름} 님의\n 마니또 맞추기',
+																																					style: TextStyle(
+																																						color: Color(0xFF000000),
+																																						fontSize: 16,
+																																					),
+																																				),
+																																			),
+																																		]
+																																),
+																															),
+																														),
+																													]
+																											),
+																										),
+																									),
+																									IntrinsicHeight(
+																										child: Container(
+																											decoration: BoxDecoration(
+																												border: Border.all(
+																													color: Color(0xFF000000),
+																													width: 1,
+																												),
+																												borderRadius: BorderRadius.circular(10),
+																												color: Color(0xFFFFFFFF),
+																												boxShadow: [
+																													BoxShadow(
+																														color: Color(0x4D000000),
+																														blurRadius: 4,
+																														offset: Offset(0, 4),
+																													),
+																												],
+																											),
+																											padding: EdgeInsets.symmetric(vertical: 9),
+																											margin: EdgeInsets.symmetric(horizontal: 39),
+																											width: double.infinity,
+																											child: Column(
+																													children: [
+																														Text(
+																															'마니또를 맞춰보세요!',
+																															style: TextStyle(
+																																color: Color(0xFF000000),
+																																fontSize: 20,
 																															),
 																														),
 																													]
@@ -374,22 +434,22 @@ class chattab extends StatelessWidget {
 																			bottom: 0,
 																			left: 1,
 																			width: 360,
-																			height: 80,
+																			height: 120,
 																			child: Container(
 																				decoration: BoxDecoration(
 																					borderRadius: BorderRadius.circular(15),
 																					color: Color(0xFF8C5B3F),
 																				),
-																				padding: EdgeInsets.only( left: 10, right: 10),
-																				transform: Matrix4.translationValues(0, 17, 0),
+																				padding: EdgeInsets.only( left: 9, right: 9),
+																				transform: Matrix4.translationValues(0, 30, 0),
 																				width: 360,
-																				height: 80,
+																				height: 120,
 																				child: Column(
 																						crossAxisAlignment: CrossAxisAlignment.start,
 																						children: [
 																							IntrinsicHeight(
 																								child: Container(
-																									margin: EdgeInsets.only( top: 8),
+																									margin: EdgeInsets.only( top: 30),
 																									width: double.infinity,
 																									child: Row(
 																											mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -404,12 +464,10 @@ class chattab extends StatelessWidget {
 																													),
 																													width: 22,
 																													height: 22,
-																														child: ClipRRect(
-																																child: Image.asset(
-																																	'assets/chattab/+button.png',
-																																	fit: BoxFit.fill,
-																																)
-																														)
+																													child: Image.asset(
+																														'assets/chattab/tail2',
+																														fit: BoxFit.fill,
+																													)
 																												),
 																												Container(
 																													decoration: BoxDecoration(
