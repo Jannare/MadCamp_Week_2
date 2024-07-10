@@ -38,6 +38,11 @@ dependencies:
   kakao_flutter_sdk: ^1.9.3
   http: ^1.2.1
   web_socket_channel: ^3.0.0
+  socket_io_client: ^3.0.0-beta.2
+  stroke_text: any
+  provider: ^6.0.5
+  flutter_screenutil: ^5.8.4
+
 
 dev_dependencies:
   flutter_screenutil: ^5.8.4
@@ -66,13 +71,17 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/tab/
     - assets/chattab/
-    - assets/Enteringtab/
+    - assets/et/
     - assets/guess/
     - assets/Lobby/
     - assets/mybird/
     - assets/naming/
     - assets/images/yonsuri.png
+    - assets/images/Person.png
+    - assets/images/title.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
