@@ -2,15 +2,62 @@
 
 Week2_Flutter_Manito
 
-## Getting Started
+### Preview
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+![카카오톡을 이용한 로그인 화면](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/7d16073e-0f5d-424a-b5e5-1c980a5577d2/Untitled.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+카카오톡을 이용한 로그인 화면
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![마니또 방 만들기 및 마니또 방 코드를 이용한 마니또 방 참여 탭](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/53cc2beb-5dfe-4587-b3b9-8bc6d81dd874/Untitled.png)
+
+마니또 방 만들기 및 마니또 방 코드를 이용한 마니또 방 참여 탭
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/bf0e4dfe-1277-482d-985b-9c4bb3ebdd28/Untitled.png)
+
+### Details
+
+---
+
+**Tab1** 카카오톡 로그인 화면 
+
+- 카카오톡의 api로 로그인하기 버튼을 통해 로그인할 수 있습니다.
+- 카카오톡 로그인은 클라이언트가 직접 카카오톡 서버로부터 토큰을 받고 인증을 한 후 서버에게 카카오톡 id를 전달 하는 방식으로 진행합니다.
+
+[앱 실행 및 로그인](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/acbab5ff-483f-4ef2-94ab-06bcd73fa550/%EC%83%88%EB%A1%9C_%EC%8B%9C%EC%9E%91.mp4)
+
+앱 실행 및 로그인
+
+**Tab2 마니또 방 만들기 및 입장하기**
+
+- 방을 만들고 싶으면 방 만들기 버튼을 누르고 ‘둥지이름’, ‘마니또 시작 날짜’,’마니또 종료 날짜’, ‘고정미션1’, ’고정미션2’, ‘상품’을 선택할 수 있습니다
+- 기존에 있던 방에 들어가고 싶은 사람은 ‘둥지이름’을 입력하면 기존에 개설된 방에 들어갈 수 있습니다.
+- <어떤 동작을 수행>하면 마니또를 정할 수 있습니다
+- 마니또 방의 종료일이 오기 전까지 일정한 간격을 바탕으로 마니또 방을 만들때 정했던 고정미션이 일정하게 제시되도록 기획하였습니다.
+- 마니또 방의 인원들이 정해진 기간 안에 미션을 수행하고 마니또 방에 수행사실을 올리면 마니또 방의 사람들이 투표를 통해서 미션 수행 사실을 통과시킬 수 있는 시스템을 만드려고 기획하였습니다.
+- 마니또 방에서 미션 수행을 통과받은 사람들에게 마니띠에게 힌트를 받을 수 있는 권한을 주고 어떤 힌트를 받을 것인가에 대해서 투표를 해서 정하는 시스템을 기획하였습니다.
+
+[마니또 방 개설 모습 및 입장](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/d6b1bd45-8aac-4c0f-8f33-7149c3e4e9f0/%EC%83%88%EB%A1%9C_1.mp4)
+
+마니또 방 개설 모습 및 입장
+
+**Tab3 채팅 탭**
+
+- 마니또 방에 들어가 있는 사람들끼리 채팅을 할 수 있으며 채팅 내용은 모두 db에 저장됩니다.
+- 마니또 방의 종료일자가 되면 마니또 맞추기 창이 뜨며, 자신이 생각한 마니띠를 입력합니다. 그 후 자신의 마니띠를 알려주며 마니또 방의 사람들이 자신의 마니또를 맞추었는지 공지합니다.
+- 마니또 방의 채팅은 socket을 이용해서 만들었으며 채팅방에 입장하면 이전의 채팅방의 데이터가 db에서 클라이언트에게 보내지도록 만들었습니다.
+
+[새로_채팅.mp4](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/285f9f8b-5832-43a0-9c14-899562d10c74/%EC%83%88%EB%A1%9C_%EC%B1%84%ED%8C%85.mp4)
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/31943df5-7837-4c9b-abbe-7141d2a483bf/Untitled.png)
+
+**Tab4 프로필 탭**
+
+- 자신의 프로필( 성별, mbti, 나이,취미, 좋아하는 음식)을 입력할 수 있으며 자신의 로그인 된 정보를 바탕으로 자신의 프로필을 불러올 수 있습니다. 또한 자신의 프로필을 누르고 저장 버튼을 누르면 자신의 프로필이 업데이트되며 db에 저장되어 있던 자신의 예전 프로필은 지워집니다.자신의 프로필( 성별, mbti, 나이,취미, 좋아하는 음식)을 입력할 수 있으며 자신의 로그인 된 정보를 바탕으로 자신의 프로필을 불러올 수 있습니다. 또한 자신의 프로필을 누르고 저장 버튼을 누르면 자신의 프로필이 업데이트되며 db에 저장되어 있던 자신의 예전 프로필은 지워집니다.
+
+[새로_2.mp4](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/83456197-32c5-48dd-b393-a40ebe365cc8/%EC%83%88%EB%A1%9C_2.mp4)
+
+**Tab5 새 키우기**
+
+- 마니또의 미션을 수행해 나감에 따라 새의 성장하는 모습을 보여주려고 하였습니다.
